@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import BeerStyle from './Beer-Guide/BeerStyle';
 
 
 class BeerList extends Component {
@@ -10,7 +11,7 @@ class BeerList extends Component {
     return (
       <div>
         <h1>Beer Styles</h1>
-        BeerList styles
+        <BeerStyle/>
       </div>
     );
   }
