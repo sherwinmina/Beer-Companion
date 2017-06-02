@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Button, Icon} from 'react-materialize';
 
 class Signin extends Component {
   render () {
@@ -8,8 +9,7 @@ class Signin extends Component {
         <input />
         <p>Password</p>
         <input />
-        <br/>
-        <button className="primary">Submit</button>
+        <Button waves='light' >Submit<Icon right>save</Icon></Button>
       </div>
     )
   }
