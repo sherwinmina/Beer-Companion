@@ -10,7 +10,6 @@ class BeerList extends Component {
   render () {
     return (
       <div>
-        <h1>Beer Styles</h1>
         <BeerStyle/>
       </div>
     );

@@ -11,7 +11,7 @@ import signin from './components/screens/auth/signin';
 import signup from './components/screens/auth/signup';
 
 import elements from './components/screens/Beer-Guide/Elements';
-import liststyle from './components/screens/Beer-Guide/StyleList';
+import listStyle from './components/screens/Beer-Guide/StyleList';
 import beerStyle from './components/screens/Beer-Guide/BeerStyle';
 
 
@@ -24,7 +24,7 @@ export default (
       
     </Route>
     <Route path="beer/elements" component={elements}/>
-    <Route path="beer/elements" component={elements}/>
+    <Route path="beer/listStyle" component={listStyle}/>
     <Route path="beer/beerstyle" component={beerStyle}/>
 
     <Route path="grains" component={Grains}/>

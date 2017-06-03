@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import {Tabs, Tab } from 'react-materialize';
-import BeerStyle from './Elements'
 
 class secondaryRoute extends Component {
   onClickHandler() {
@@ -10,12 +9,14 @@ class secondaryRoute extends Component {
 
   render () {
     return (
-        <Tabs>
-          <Tab title="General" href="/"><Link to="/">General</Link></Tab>
-          <Tab title="Elements" href="/beer/elements"><Link to="/beer/elements">Elements</Link> </Tab> 
-          <Tab title="List of styles"><Link to="/beer/style">List of styles</Link> </Tab>  
-          <Tab title="List of all beers">Great style of beerare found here </Tab> 
-        </Tabs>
+  
+         <div className="Tabs"> 
+          <li  className="tab col s3"><Link  to="/">General</Link></li>
+          <li  className="tab"><Link title="Elements" to="/beer/elements">Elements</Link></li> 
+          <Link title="List of styles" to="/beer/beerstyle">g</Link> 
+          <Link title="List of all beers" to="/beer/listStyle"></Link>           
+        </div>
+ 
     )
   }
 }
