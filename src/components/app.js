@@ -5,16 +5,16 @@ import { Row } from 'react-materialize';
 export default class App extends Component {
   render() {
      return (
-       <Row>
+       <div>
           <Header/>
-          <div className="row" style={divStyle}>
+          <div style={divStyle}>
              {this.props.children}
           </div>     
-       </Row>
+       </div>
     );
   }
 }
 
 const divStyle = {
-  padding: "40px"
+  padding: "60px"
 }

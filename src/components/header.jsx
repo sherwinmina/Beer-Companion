@@ -13,22 +13,22 @@ class Header extends Component {
       // Show a link to sign in or sign out
       return [
         <NavItem>
-           <Link className="nav-link" to="/beer">Beer</Link>
+           <Link  to="/beer">Beer</Link>
         </NavItem>,
         <NavItem>
-           <Link className="nav-link" to="/hops">Hops</Link>
+           <Link  to="/hops">Hops</Link>
         </NavItem>,
-        <NavItem className="nav-item">
-           <Link className="nav-link" to="/grains">Grains</Link>
+        <NavItem >
+           <Link  to="/grains">Grains</Link>
         </NavItem>,
-        <NavItem className="nav-item">
-           <Link className="nav-link" to="/yeast">Yeast</Link>
+        <NavItem >
+           <Link  to="/yeast">Yeast</Link>
         </NavItem>,
-        <NavItem className="nav-item">
-           <Link className="nav-link" to="/signin">Sign In</Link>
+        <NavItem >
+           <Link  to="/signin">Sign In</Link>
         </NavItem>,
-        <NavItem className="nav-item">
-          <Link className="nav-link" to="/signup">Sign Up</Link>
+        <NavItem >
+          <Link  to="/signup">Sign Up</Link>
         </NavItem>
       ];
     }
@@ -36,10 +36,8 @@ class Header extends Component {
 
   render() {
     return (
-      <Navbar >
-        <NavItem >
+      <Navbar brand='Beer-Guide' left>
           {this.renderLinks()}
-        </NavItem>
       </Navbar>
     );
   }

@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import {Tabs, Tab } from 'react-materialize';
+
 
 class secondaryRoute extends Component {
+  onClickHandler() {
+    
+  }
+
   render () {
     return (
-      <div>
-         <div>
-          <ul className="nav navbar-nav">
-          <li className="nav-item">
-             <Link className="nav-link" to="/">General</Link> 
-          </li>
-
-          <li className="nav-item">
-            <Link className="nav-link" to="/beer/elements">Elements</Link>  
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/beer/style">List of styles</Link>  
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/styleguide">List of all beers</Link>  
-          </li>
-        </ul>
-        </div>
-      </div>
+        <Tabs>
+          <Tab title="General" href="/"><Link to="/">General</Link></Tab>
+          <Tab title="Elements" href="/beer/elements"><Link to="/beer/elements">Elements</Link> </Tab> 
+          <Tab title="List of styles"></Tab>  
+          <Tab title="List of all beers"><Link to="/styleguide">List of all beers</Link> </Tab> 
+        </Tabs>
     )
   }
 }
