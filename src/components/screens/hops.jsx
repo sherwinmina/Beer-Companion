@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router';
-import ToggleDisplay from 'react-toggle-display';
+import {Collapsible, CollapsibleItem} from 'react-materialize';
 
 class Hops extends Component {
   constructor() {
@@ -15,25 +15,13 @@ class Hops extends Component {
   }
   
   renderList() {
-    const showHide = {
-      'display': this.state.isHidden ? 'block' : 'none'
-    };
 
     return hops.map((hop) => {
-      return ( 
-        <div>
-          <li key={hop.name} className="list-group-item nav-link"
-           onClick={() => this.handleClick()}> 
-            {hop.name}   +
-          </li> 
-        <ToggleDisplay show={this.state.show}>
-           <div className="list-group-item">
-            {hop.description}
-          </div>
-        </ToggleDisplay>
-           
-          
-        </div>     
+      return (        
+          <CollapsibleItem key={hop.name} header={hop.name} accordion='true'
+          > 
+            {hop.description}   
+          </CollapsibleItem>  
         );
     });
   }
@@ -41,9 +29,8 @@ class Hops extends Component {
   render () {
     return (
       <div>
-        <h1>Hops {console.log(this.state)}</h1>
-        <ul >{this.renderList()}</ul>
-       
+        <h4 className="center-align">Varity of hopsHops</h4>
+        <div className="collapsible">{this.renderList()}</div> 
       </div>
     )
   }

@@ -6,8 +6,6 @@ class Beer extends Component {
     return (
       <div>
         <Routes/>
-        <br/>
-        <br/>
         <div>
           <h3>Beer</h3>
 
