@@ -20,6 +20,8 @@ class Header extends Component {
         ,
            <li> <Link  to="/yeast">Yeast</Link> </li>
         ,
+          <li> <Link  to="/calculator">Recipe Calculator</Link> </li>
+        ,
            <li> <Link  to="/signin">Sign In</Link> </li>
         ,
            <li> <Link  to="/signup">Sign Up</Link>  </li>     

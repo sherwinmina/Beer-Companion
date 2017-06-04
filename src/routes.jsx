@@ -13,6 +13,7 @@ import signup from './components/screens/auth/signup';
 import elements from './components/screens/Beer-Guide/Elements';
 import listStyle from './components/screens/Beer-Guide/StyleList';
 import beerStyle from './components/screens/Beer-Guide/BeerStyle';
+import calculator from './components/screens/Recipe-Calculator/';
 
 
 
@@ -30,6 +31,7 @@ export default (
     <Route path="grains" component={Grains}/>
     <Route path="hops" component={Hops}/>
     <Route path="yeast" component={Yeast}/>
+    <Route path="calculator" component={calculator}/>
     <Route path="signin" component={signin}/>
     <Route path="signup" component={signup}/>
   </Route>

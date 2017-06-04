@@ -12,9 +12,9 @@ class secondaryRoute extends Component {
   
          <div className="Tabs"> 
           <li  className="tab col s3"><Link  to="/">General</Link></li>
-          <li  className="tab"><Link title="Elements" to="/beer/elements">Elements</Link></li> 
-          <Link title="List of styles" to="/beer/beerstyle">g</Link> 
-          <Link title="List of all beers" to="/beer/listStyle"></Link>           
+          <li  className="tab col s3"><Link title="Elements" to="/beer/elements">Elements</Link> </li> 
+          <li  className="tab col s3"><Link title="List of styles" to="/beer/beerstyle">List of all Styles</Link> </li>
+          <li  className="tab col s3" ><Link title="List of all beers" to="/beer/listStyle">List of all Beers</Link>  </li>         
         </div>
  
     )
