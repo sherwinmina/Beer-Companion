@@ -1,33 +1,97 @@
 import React, { Component } from 'react';
-import Foundation from 'react-foundation';
+import {Col, Button, Row, Input, Card, CardTitle, CardPanel} from 'react-materialize';
 
 class Calculator extends Component {
   render () {
     return (
-     
-      <div className="">
-        <h4 className="center-align">Recipe Calculator</h4>
+      <div>
+      <Card className="">
         <div className="row">
-        
-        </div>
+          <h5 className="center-align">Recipe Builder</h5>
+          <div className="col s7">
+          <Input type="" label="Recipe Name" s={12}></Input>
+          </div>
 
-        <div className="row">
-          <div className="col s6">
-            <h4>Recipe</h4>
-            <div className="row">
-              <label><h5>Units:<input  /></h5></label>
-            </div>
+          <div className="col s5">
+          <Input label="Author/Source:"></Input>
           </div>
-          
+       </div>
+
+       <hr style={{borderWidth:'2px'}}> </hr>
+
+        <div className="row" >
           <div className="col s6">
-            <h4> Calculator</h4>
+            <h5>Recipe</h5>
             
+            <Row>
+              <Input className="browser-default" s={12} type='select' label="Brew Method" defaultValue='1'>
+                <option value='1' disabled selected >Select Method</option>
+                <option value='2'>All Grain</option>
+                <option value='3'>BIAB</option>
+                <option value='4'>Extract</option>
+                <option value='5'>Partial Mash</option>
+              </Input>
+            </Row>
+
+            <Input className="browser-default" s={12} type='select' label="Units" defaultValue='2'>
+                <option value='2'>US-(Gallons, lbs, oz)</option>
+                <option value='3'>Metric-(liters, kg, g)</option>
+            </Input >
+            <Input label="Batch Size:" placeholder="5.5 (gallons)"/>
+            <Input label="Est. Boil Size:" placeholder="7.5 (gallons)"/>
+            </div>
+         
+          
+          <div className="col s6" style={{borderLeft: '1px solid grey'}}>
+            <h5>ABV Calculator</h5>
+            
+            <Row>
+                <Input className='with-gap' name='SG(1.xxx)' type='radio' value='1.050' label='SG(1.xxx)' defaultValue='1.050'/>
+                <Input className='with-gap' name='Plato ˚P' type='radio' value='1.010' label='Plato ˚P' />
+            </Row>
+                        
             <div className="row">
-              
+              <Input label="Original Gravity" defaultValue='1.050'/>
+              <Input label="Final Gravity" defaultValue='1.010'/>
+            </div>
+
+            <Row>
+              <div className="col">Equation: </div>
+              <div className="col">
+                <Input className='with-gap' name='SG(1.xxx)' type='radio' label='Standard' defaultValue='1.050'/>
+                <Input className='with-gap' name='Plato ˚P' type='radio' label='Alternate' />
+              </div>
+
+              <div className="col"><font size="4" color='green'> Alcohol By Volume:</font> <font size="3">5.25%</font> </div>
+              <div className="col"><h6>Apparent Attenuation:</h6> <div>79%</div> </div>
+              <div className="col"><h6>Calories:</h6> <div>163.7 per 12oz</div> </div>
+
+            </Row>
+            <div className="row" >
+              <Button className="col offset-s7">Update</Button>        
             </div>
           </div>
         </div>
-      </div>
+      </Card>
+      
+      <Row>
+       <Col s={12} m={5}>
+				<CardPanel className="teal lighten-4 black-text">
+						<span>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</span>
+				</CardPanel>
+		  </Col>
+
+        <Col m={6} s={6}>
+        <Card className='small'
+          header={<CardTitle image='img/sample-1.jpg'>Card Title</CardTitle>}
+          actions={[<a href='#'>This is a Link</a>]}>
+          I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+        </Card>
+        </Col>
+      </Row>
+
+     </div>
+     
     )
   }
 }
