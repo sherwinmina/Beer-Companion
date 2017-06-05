@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import {Input} from 'react-materialize';
+import Foundation from 'react-foundation';
 
 class Calculator extends Component {
   render () {
     return (
-      <div className="container">
-        <h4>Recipe Calculator</h4>
+     
+      <div className="">
+        <h4 className="center-align">Recipe Calculator</h4>
         <div className="row">
-          <div className="col s4">
+        
+        </div>
+
+        <div className="row">
+          <div className="col s6">
             <h4>Recipe</h4>
             <div className="row">
-              the box
+              <label><h5>Units:<input  /></h5></label>
             </div>
           </div>
           
-          <div className="col s8">
+          <div className="col s6">
             <h4> Calculator</h4>
             
             <div className="row">
-              the box
-              <Input/>
+              
             </div>
           </div>
         </div>
