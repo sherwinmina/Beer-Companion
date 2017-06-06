@@ -7,7 +7,7 @@ import {
   FETCH_MESSAGE
  } from './types';
 
-const  ROOT_URL = 'http://localhost:3090';
+// const  ROOT_URL = 'http://localhost:3090';
 
 export function signinUser({ email, password }) {
   return function(dispatch) {
@@ -69,3 +69,34 @@ export function fetchMessage() {
       });
   }
 }
+
+export function fetchWeather(city) {
+  const API_KEY = '208678fd1ba9778a0868e3d862e5d808';
+const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
+
+  const url = `${ROOT_URL}&q=${city},us`;
+  const request = axios.get(url);
+
+  console.log('Request:', request);
+
+  return request
+ 
+}
+
+export function fetchHops() {
+  // const API_KEY = 'e61443089ea955edc0ad009ec7d5fc1a';
+  // const ROOT_URL = `http://api.brewerydb.com/v2/hops?key=${API_KEY}`;
+
+  // http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a
+
+  // const url = ROOT_URL;
+  const url = 'http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a'
+  const request = axios.get(url);
+
+  console.log('Request:', request);
+
+  return request
+ 
+}
+
+fetchHops();
