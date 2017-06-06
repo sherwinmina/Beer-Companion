@@ -20,30 +20,24 @@ class Header extends Component {
         ,
            <li> <Link  to="/yeast">Yeast</Link> </li>
         ,
-          <li> <Link  to="/calculator">Recipe Calculator</Link> </li>
-        ,
-           <li> <Link  to="/signin">Sign In</Link> </li>
-        ,
-           <li> <Link  to="/signup">Sign Up</Link>  </li>  
-
-        ,
-        
-          <Dropdown trigger={
+           <Dropdown trigger={
               <NavItem>Recipe Calculator</NavItem>
             }>
              <li><Link  to="/calculator/priming">Priming Calculator</Link></li>
             <li><Link  to="/calculator">Brewing Calculator</Link></li>
           </Dropdown>
-        
-                 
+        ,
+           <li> <Link  to="/signin">Sign In</Link> </li>
+        ,
+           <li> <Link  to="/signup">Sign Up</Link>  </li>  
       ];
     }
   }
 
   render() {
     return (
-      <Navbar brand='Beer-Guide' left className="blue-grey darken-1 z-depth-1">
-        <ul className="left">
+      <Navbar brand='Beer-Guide' left className="blue-grey darken-2 z-depth-0">
+        <ul className="left" style={{fontWeight:"200"}}>
            {this.renderLinks()}
         </ul> 
       </Navbar>

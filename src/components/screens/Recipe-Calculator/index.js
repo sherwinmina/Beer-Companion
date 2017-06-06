@@ -39,7 +39,10 @@ class Calculator extends Component {
             </Input >
             <Input label="Batch Size:" placeholder="5.5 (gallons)"></Input>
             <Input label="Est. Boil Size:" placeholder="7.5 (gallons)"><a href="https://www.brewersfriend.com/faq/#recipes17"><Icon>info_outline</Icon></a></Input>
-
+            
+            
+            
+            <Input label="Date Brewed" name='on' type='date' onChange={function(e, value) {}} />
             <textarea name="Text1" cols="40" rows="40"></textarea>
             <Button>Save Notes</Button>
             </div>
@@ -49,8 +52,10 @@ class Calculator extends Component {
             <h5>ABV Calculator</h5>
             
             <Row>
-                <Input className='with-gap' name='SG(1.xxx)' type='radio' value='1.050' label='SG(1.xxx)' defaultValue='1.050'/>
-                <Input className='with-gap' name='Plato ˚P' type='radio' value='1.010' label='Plato ˚P' />
+            <div>
+                <Input name='group1' className='with-gap'  type='radio' value='1.050' label='SG(1.xxx)' />
+                <Input name='group1' className='with-gap'  type='radio' value='1.010' label='Plato ˚P' />
+            </div>
             </Row>
                         
             <div className="row">
