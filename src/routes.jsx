@@ -14,6 +14,7 @@ import elements from './components/screens/Beer-Guide/Elements';
 import listStyle from './components/screens/Beer-Guide/StyleList';
 import beerStyle from './components/screens/Beer-Guide/BeerStyle';
 import calculator from './components/screens/Recipe-Calculator/';
+import priming from './components/screens/Recipe-Calculator/primingCalculator';
 
 
 
@@ -32,6 +33,8 @@ export default (
     <Route path="hops" component={Hops}/>
     <Route path="yeast" component={Yeast}/>
     <Route path="calculator" component={calculator}/>
+      <Route path="calculator/priming" component={priming}/>
+    
     <Route path="signin" component={signin}/>
     <Route path="signup" component={signup}/>
   </Route>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { Navbar, NavItem } from 'react-materialize';
+import { Navbar, NavItem, Dropdown, Button } from 'react-materialize';
 
 class Header extends Component {
   renderLinks() {
@@ -24,7 +24,18 @@ class Header extends Component {
         ,
            <li> <Link  to="/signin">Sign In</Link> </li>
         ,
-           <li> <Link  to="/signup">Sign Up</Link>  </li>     
+           <li> <Link  to="/signup">Sign Up</Link>  </li>  
+
+        ,
+        
+          <Dropdown trigger={
+              <NavItem>Recipe Calculator</NavItem>
+            }>
+             <li><Link  to="/calculator/priming">Priming Calculator</Link></li>
+            <li><Link  to="/calculator">Brewing Calculator</Link></li>
+          </Dropdown>
+        
+                 
       ];
     }
   }

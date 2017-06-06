@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col, Button, Row, Input, Card, CardTitle, CardPanel} from 'react-materialize';
+import {Col, Button, Row, Input, Card, CardTitle, CardPanel, Icon} from 'react-materialize';
 
 class Calculator extends Component {
   render () {
@@ -37,8 +37,11 @@ class Calculator extends Component {
                 <option value='2'>US-(Gallons, lbs, oz)</option>
                 <option value='3'>Metric-(liters, kg, g)</option>
             </Input >
-            <Input label="Batch Size:" placeholder="5.5 (gallons)"/>
-            <Input label="Est. Boil Size:" placeholder="7.5 (gallons)"/>
+            <Input label="Batch Size:" placeholder="5.5 (gallons)"></Input>
+            <Input label="Est. Boil Size:" placeholder="7.5 (gallons)"><a href="https://www.brewersfriend.com/faq/#recipes17"><Icon>info_outline</Icon></a></Input>
+
+            <textarea name="Text1" cols="40" rows="40"></textarea>
+            <Button>Save Notes</Button>
             </div>
          
           
@@ -74,10 +77,25 @@ class Calculator extends Component {
         </div>
       </Card>
       
+
       <Row>
-       <Col s={12} m={5}>
+       <Col s={12} m={6}>
 				<CardPanel className="teal lighten-4 black-text">
-						<span>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</span>
+         <h5>Fermentables</h5>
+         <Row>
+         <Col>  
+          <Input className="browser-default" s={4} type='select' label="Units" defaultValue='2'>
+                <option value='2'>US-(Gallons, lbs, oz)</option>
+                <option value='3'>Metric-(liters, kg, g)</option>
+            </Input >
+             <Input className="browser-default" s={4} type='select' label="Units" defaultValue='2'>
+                <option value='2'>US-(Gallons, lbs, oz)</option>
+                <option value='3'>Metric-(liters, kg, g)</option>
+            </Input >
+         </Col>
+          
+         </Row>
+						
 				</CardPanel>
 		  </Col>
 
