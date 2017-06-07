@@ -2,7 +2,8 @@ export {
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
-  FETCH_MESSAGE
+  FETCH_MESSAGE,
+  FETCH_HOPS
 } from '../actions/types';
 
 export default function(state= {}, action){

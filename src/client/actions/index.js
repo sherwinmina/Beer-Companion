@@ -4,7 +4,8 @@ import {
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
-  FETCH_MESSAGE
+  FETCH_MESSAGE,
+  FETCH_HOPS
  } from './types';
 
 // const  ROOT_URL = 'http://localhost:3090';
@@ -70,18 +71,19 @@ export function fetchMessage() {
   }
 }
 
-export function fetchWeather(city) {
-  const API_KEY = '208678fd1ba9778a0868e3d862e5d808';
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
+// export function fetchWeather(city) {
+//   const API_KEY = '208678fd1ba9778a0868e3d862e5d808';
+// const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
-  const url = `${ROOT_URL}&q=${city},us`;
-  const request = axios.get(url);
+//   const url = `${ROOT_URL}&q=${city},us`;
+//   const request = axios.get(url);
 
-  console.log('Request:', request);
+//   console.log('Request:', request);
 
-  return request
+//   return request
  
-}
+// }
+// fetchWeather(96793);
 
 export function fetchHops() {
   // const API_KEY = 'e61443089ea955edc0ad009ec7d5fc1a';
@@ -91,12 +93,50 @@ export function fetchHops() {
 
   // const url = ROOT_URL;
   const url = 'http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a'
-  const request = axios.get(url);
+  const request = axios.get(url,{
+      headers: { 'Access-Control-Allow-Origin': ' http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a' }
+    })
+    .then(response => {
+      console.log(response);
+    })
 
-  console.log('Request:', request);
+  // console.log('Request:', request);
 
-  return request
- 
+  return {
+    type: FETCH_HOPS,
+    payload: request
+  }
 }
 
 fetchHops();
+
+// return function(dispatch) {
+//     axios.get(ROOT_URL, {
+//       headers: { authorization: localStorage.getItem('token') }
+//     })
+//       .then(response => {
+//         dispatch({
+//           type: FETCH_MESSAGE,
+//           payload: response.data.message
+//         });
+//       });
+//   }
+
+
+  // return function(dispatch) {
+  //   axios.get(ROOT_URL, {
+  //     headers: { authorization: localStorage.getItem('token') }
+  //   })
+  //     .then(response => {
+  //       dispatch({
+  //         type: FETCH_MESSAGE,
+  //         payload: response.data.message
+  //       });
+  //     });
+  // }
+
+  // return function(dispatch) {
+  //   axios.get(ROOT_URL, {
+  //    headers:  Access-Control-Allow-Origin: *
+  //   })
+  // }
