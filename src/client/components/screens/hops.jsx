@@ -1,26 +1,33 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router';
 import {Collapsible, CollapsibleItem} from 'react-materialize';
+import axios from 'axios';
 
 class Hops extends Component {
-  constructor() {
-    super();
-    this.state = { show: false };
+  constructor(props) {
+    super(props);
+    this.state = { myhops: [] };
   }
  
-  handleClick() {
-    this.setState({
-      show: !this.state.show
-    });
+  componentDidMount() {
+    const request = axios.get('../../../../../data/hops.json')
+    .then(response => {
+      
+      response.data.map((hop) => {
+              console.log(hop.name) 
+      });
+      
+      this.setState({myhops: response.data});
+    })
   }
   
   renderList() {
 
-    return hops.map((hop) => {
+    return this.state.myhops.map((hop) => {
       return (        
-          <CollapsibleItem key={hop.name} header={hop.name} accordion='true'
+          <CollapsibleItem key={hop.id} header={hop.name} accordion='true'
           > 
-            {hop.description}   
+            
           </CollapsibleItem>  
         );
     });
@@ -31,6 +38,9 @@ class Hops extends Component {
       <div>
         <h4 className="center-align">Varity of hopsHops</h4>
         <div className="collapsible">{this.renderList()}</div> 
+        {console.log(this.state.myhops)}
+        {this.state.myhops}
+       
       </div>
     )
   }
@@ -48,4 +58,31 @@ const hops = [
     }
   ];
 
-export default Hops
+  // const hops = axios.get('../../../../../data/hops.json')
+  //   .then(response => {
+  //     console.log((response));
+  //     return response.data;
+      
+  //   })
+
+// function fetchHops() {
+//   // const ROOT_URL = `'../../../../../data/hops.json'`;
+
+//   const url = '../../../../../data/hops.json';
+//   const request = axios.get(url)
+//     .then(response => {
+//       // console.log('data: ', {response})
+//       return {data: response.data}
+//     });
+
+//   // console.log('Request:', request);
+
+//   return request
+ 
+// }
+
+// let hops = fetchHops();
+// console.log(hops);
+
+   
+export default Hops;

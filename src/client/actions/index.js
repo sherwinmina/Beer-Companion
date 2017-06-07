@@ -85,30 +85,30 @@ export function fetchMessage() {
 // }
 // fetchWeather(96793);
 
-export function fetchHops() {
+// export function fetchHops() {
   // const API_KEY = 'e61443089ea955edc0ad009ec7d5fc1a';
   // const ROOT_URL = `http://api.brewerydb.com/v2/hops?key=${API_KEY}`;
 
   // http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a
 
   // const url = ROOT_URL;
-  const url = 'http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a'
-  const request = axios.get(url,{
-      headers: { 'Access-Control-Allow-Origin': ' http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a' }
-    })
-    .then(response => {
-      console.log(response);
-    })
+  // const url = 'http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a'
+  // const request = axios.get(url,{
+  //     headers: { 'Access-Control-Allow-Origin': ' http://api.brewerydb.com/v2/hops?key=e61443089ea955edc0ad009ec7d5fc1a' }
+  //   })
+  //   .then(response => {
+  //     console.log(response);
+  //   })
 
   // console.log('Request:', request);
 
-  return {
-    type: FETCH_HOPS,
-    payload: request
-  }
-}
+//   return {
+//     type: FETCH_HOPS,
+//     payload: request
+//   }
+// }
 
-fetchHops();
+// fetchHops();
 
 // return function(dispatch) {
 //     axios.get(ROOT_URL, {
