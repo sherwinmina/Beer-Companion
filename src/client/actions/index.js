@@ -10,6 +10,10 @@ import {
 
 // const  ROOT_URL = 'http://localhost:3090';
 
+export function selectHops(hop) {
+  console.log('A hop has been selected', hop.name)
+}
+
 export function signinUser({ email, password }) {
   return function(dispatch) {
 
