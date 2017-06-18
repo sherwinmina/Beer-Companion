@@ -4,7 +4,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from './components/app';
 import BeerList from './components/screens/beer_list';
 import Beer from './components/screens/Beer-Guide/beer';
-import Hops from './components/screens/hops';
+import Hops from './components/screens/Hops/hops';
 import Grains from './components/screens/grains';
 import Yeast from './components/screens/yeast';
 import signin from './components/screens/auth/signin';
