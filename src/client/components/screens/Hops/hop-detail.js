@@ -10,7 +10,7 @@ class HopDetail extends Component{
 
     return (
       <div>
-        <h3>Details for:</h3>
+        <h5>Details for:</h5>
         <h5>{this.props.hop.name}</h5>
         <div>{this.props.hop.description}</div>
       </div>

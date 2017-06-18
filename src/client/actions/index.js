@@ -5,15 +5,26 @@ import {
   UNAUTH_USER,
   AUTH_ERROR,
   FETCH_MESSAGE,
+  HOP_SELECTED,
   FETCH_HOPS
  } from './types';
+
+ import hopList from '../../../data/hops.json';
 
 // const  ROOT_URL = 'http://localhost:3090';
 
 export function selectHops(hop) {
   return {
-    type: 'HOP_SELECTED',
+    type: HOP_SELECTED,
     payload: hop
+  };
+}
+
+export function fetchHops() {
+  console.log(hopList);
+  return {
+    type: 'FETCH_HOPS',
+    payload: hopList
   };
 }
 

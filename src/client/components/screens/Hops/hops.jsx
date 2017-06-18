@@ -9,7 +9,11 @@ import { selectHops } from '../../../actions';
 import { bindActionCreators } from 'redux';
 
 
-class Hops extends Component { 
+class Hops extends Component {
+  // componentDidMount() {
+  //   fetchHops();
+  // } 
+
   renderList() {
     return this.props.hops.map((hop) => {
       return (

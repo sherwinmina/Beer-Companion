@@ -3,5 +3,6 @@ export const UNAUTH_USER = 'unauth_user';
 export const AUTH_ERROR = 'auth_error';
 export const FETCH_MESSAGE = 'fetch_message';
 
-export const FETCH_HOPS = 'fetch_hops';
+export const FETCH_HOPS = 'FETCH_HOPS';
+export const HOP_SELECTED = 'HOP_SELECTED'
 
