@@ -9,7 +9,8 @@ import {
   FETCH_HOPS
  } from './types';
 
- import hopList from '../../../data/hops.json';
+import hopList from '../../../data/hops.json';
+
 
 // const  ROOT_URL = 'http://localhost:3090';
 
@@ -21,10 +22,10 @@ export function selectHops(hop) {
 }
 
 export function fetchHops() {
-  console.log(hopList);
+  const data = {name: chinook, description: 'citrusy'}
   return {
-    type: 'FETCH_HOPS',
-    payload: hopList
+    type: FETCH_HOPS,
+    payload: data
   };
 }
 

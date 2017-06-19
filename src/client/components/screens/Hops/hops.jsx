@@ -38,7 +38,7 @@ class Hops extends Component {
         <Col s={8}> 
            <HopDetail/>
         </Col>
-       
+      {console.log(this.props.hops)}
       </Row>
     );
   }
