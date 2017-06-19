@@ -1,15 +1,10 @@
-import data from '../../../data/hops.json';
+import { data } from '../../../data/hops.js';
 
 
 
 export default function() {
-  console.log(JSON.parse(data))
-  return [
-   hops
-  ]
+  return data;
 }
-
-console.log(data)
 
 
 // export default function(state  = [], action) {

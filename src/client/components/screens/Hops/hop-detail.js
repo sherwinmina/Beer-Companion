@@ -5,14 +5,19 @@ import { connect } from 'react-redux';
 class HopDetail extends Component{
   render() {
     if (!this.props.hop) {
-      return <div>select Hops for details</div>
+      return <div>Click the list to get more info</div>
     }
+
+    const { name, notes, alpha, beta , origin, substitutes} = this.props.hop;
+
 
     return (
       <div>
-        <h5>Details for:</h5>
-        <h5>{this.props.hop.name}</h5>
-        <div>{this.props.hop.description}</div>
+        <h5>{name}</h5>
+        <div><b>Origin:</b> {origin}</div>
+        <span>alpha: {alpha}</span> <span>beta: {beta}</span>
+        <div>{notes}</div>
+        <div><b>Substitues:</b> {substitutes}</div>
       </div>
     )
   }

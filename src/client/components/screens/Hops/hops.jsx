@@ -18,7 +18,7 @@ class Hops extends Component {
     return this.props.hops.map((hop) => {
       return (
         <CollectionItem
-          key={hop.name}
+          key={hop.id}
           onClick ={() => this.props.selectHops(hop)}
           className="list-group-item">
           {hop.name}
@@ -28,6 +28,7 @@ class Hops extends Component {
   }
 
   render() {
+    
     return (
       <Row>
         <Col s={4}> 
@@ -38,7 +39,7 @@ class Hops extends Component {
         <Col s={8}> 
            <HopDetail/>
         </Col>
-      {console.log(this.props.hops)}
+
       </Row>
     );
   }
