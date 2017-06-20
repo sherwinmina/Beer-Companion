@@ -5,13 +5,20 @@ import {Collapsible, CollapsibleItem, Row, Col, Collection, CollectionItem } fro
 import axios from 'axios';
 
 import HopDetail from './hop-detail';
-import { selectHops } from '../../../actions';
+import { selectHops, fetchHops } from '../../../actions';
 import { bindActionCreators } from 'redux';
 
 
+
 class Hops extends Component {
-  // componentDidMount() {
-  //   fetchHops();
+  constructor(props) {
+    super(props);
+
+    this.props.fetchHops();
+  }
+
+  // componentWillMount() {
+  //   this.props.fetchHops();
   // } 
 
   renderList() {
@@ -28,6 +35,10 @@ class Hops extends Component {
   }
 
   render() {
+
+    //  if (!this.props.hops) {
+    //   return <div>Loading</div>
+    // }
     
     return (
       <Row>
@@ -47,13 +58,14 @@ class Hops extends Component {
 
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
   hops: state.hops
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ selectHops }, dispatch)
+  return bindActionCreators({ selectHops, fetchHops }, dispatch)
 }
   
 export default connect(mapStateToProps, mapDispatchToProps)(Hops);

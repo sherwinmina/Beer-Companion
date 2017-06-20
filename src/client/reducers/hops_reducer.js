@@ -1,16 +1,19 @@
 import { data } from '../../../data/hops.js';
+import { FETCH_HOPS } from '../actions/types';
 
 
 
-export default function() {
-  return data;
+export default function(state = data, action) {
+  console.log('Action Recieved', action.payload)
+  
+  return state;
 }
 
 
-// export default function(state  = [], action) {
+// export default function(state  = null, action) {
 //   switch (action.type) {
 //     case FETCH_HOPS:
-//       return [ action.payload ]
+//       return data
 //   }
 //   return state;
 // }

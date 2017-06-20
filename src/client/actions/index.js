@@ -9,7 +9,7 @@ import {
   FETCH_HOPS
  } from './types';
 
-import hopList from '../../../data/hops.json';
+import {data} from '../../../data/hops.js';
 
 
 // const  ROOT_URL = 'http://localhost:3090';
@@ -22,13 +22,17 @@ export function selectHops(hop) {
 }
 
 export function fetchHops() {
-  const data = {name: chinook, description: 'citrusy'}
+  // const data = {name: 'chinook', description: 'citrusy'}
+  console.log('sent from action: ', data)
   return {
     type: FETCH_HOPS,
     payload: data
   };
 }
 
+
+
+// ----------------------- Authentication/ SignI------------------------
 export function signinUser({ email, password }) {
   return function(dispatch) {
 
