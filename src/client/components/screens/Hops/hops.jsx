@@ -39,7 +39,7 @@ class Hops extends Component {
     //  if (!this.props.hops) {
     //   return <div>Loading</div>
     // }
-    
+     console.log('hello')
     return (
       <Row>
         <Col s={4}> 
@@ -58,7 +58,6 @@ class Hops extends Component {
 
 
 function mapStateToProps(state) {
-  console.log(state)
   return {
   hops: state.hops
   };

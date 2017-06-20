@@ -4,7 +4,7 @@ import { FETCH_HOPS } from '../actions/types';
 
 
 export default function(state = data, action) {
-  console.log('Action Recieved', action.payload)
+  console.log('Action Recieved', action)
   
   return state;
 }
