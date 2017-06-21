@@ -34,15 +34,16 @@ export function fetchHops() {
 
 
 export function fetchYeast() {
-  // https://api.brewerydb.com/v2/fluidsizes?key=e61443089ea955edc0ad009ec7d5fc1a&format=json
+  const full = 'https://api.brewerydb.com/v2/yeasts?key=e61443089ea955edc0ad009ec7d5fc1a&format=json'
 
   const ROOT_URL = 'http://api.brewerydb.com/v2/';
   const API_KEY = 'e61443089ea955edc0ad009ec7d5fc1a';
   const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
+  const fullRequest = axios.get(full);
   
   return {
     type: FETCH_YEAST,
-    payload: request
+    payload: fullRequest
   };
 }
 
