@@ -6,7 +6,8 @@ import {
   AUTH_ERROR,
   FETCH_MESSAGE,
   HOP_SELECTED,
-  FETCH_HOPS
+  FETCH_HOPS,
+  FETCH_YEAST
  } from './types';
 
 import {data} from '../../../data/hops.js';
@@ -32,7 +33,20 @@ export function fetchHops() {
 
 
 
-// ----------------------- Authentication/ SignI------------------------
+export function fetchYeast() {
+  const ROOT_URL = 'http://api.brewerydb.com/v2/';
+  const API_KEY = 'e61443089ea955edc0ad009ec7d5fc1a'  ;
+  const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
+  
+  return {
+    type: FETCH_YEAST,
+    payload: request
+  };
+}
+
+
+
+// ----------------------- Authentication/ SignIn------------------------
 export function signinUser({ email, password }) {
   return function(dispatch) {
 

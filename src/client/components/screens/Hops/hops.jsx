@@ -17,7 +17,7 @@ class Hops extends Component {
     this.props.fetchHops();
   }
 
-  // componentWillMount() {
+  // componentDidMount() {
   //   this.props.fetchHops();
   // } 
 
