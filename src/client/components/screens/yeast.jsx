@@ -1,7 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {connect } from 'react-redux';
+import { fetchYeast } from '../../actions';
 
 class Yeast extends Component {
+  componentDidMount() {
+    this.props.fetchYeast();
+  }
+
   render () {
+    console.log(this.props.yeast)
     return (
       <div>
         <h1>Yeast</h1>
@@ -11,4 +18,10 @@ class Yeast extends Component {
   }
 }
 
-export default Yeast;
+function mapStateToProps(state) {
+  return {
+    yeast: state.yeast
+  }
+}
+
+export default connect(mapStateToProps, {fetchYeast})(Yeast);
