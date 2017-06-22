@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { browserHistory } from 'react-router';
 import { 
   AUTH_USER,
@@ -23,8 +24,6 @@ export function selectHops(hop) {
 }
 
 export function fetchHops() {
-  // const data = {name: 'chinook', description: 'citrusy'}
-  console.log('sent from action: ', data)
   return {
     type: FETCH_HOPS,
     payload: data
