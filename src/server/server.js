@@ -49,7 +49,9 @@ const cors = require('cors');
 // const fs = require('fs');
 
 const yeastData = require('../../data/style.json');
-console.log(yeastData)
+
+const beertData = require('../../data/beerstyle.json');
+
 
 const axios = require('axios');
 
@@ -69,8 +71,8 @@ app.get('/yeast', function (req, res) {
   // const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
   // const fullRequest = axios.get(full);
   
-  console.log('fullRequest')
-  res.send({yeastData})
+  
+  res.send({beertData})
 })
 
 app.listen(3000, function () {
