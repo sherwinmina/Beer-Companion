@@ -1,3 +1,7 @@
+let path = require('path');
+let ExtractTextPlugin = require('extract-webpack-text-plugin')
+let webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/client/index.jsx'
@@ -17,8 +21,15 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', ''],
+    alias: {}
   },
+  plugins: [
+    new ExtractTextPlugin(),
+    new webpack.optimizeCommonsChunkPlugin({
+
+    })
+  ],
   devServer: {
     headers: { "Access-Control-Allow-Origin": "*" }
     
