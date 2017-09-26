@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
- import Routes from './secondaryRoute';
 
 class Beer extends Component {
   render () {
     return (
       <div>
-        <Routes/>
         <div>
           <h3>Beer</h3>
 

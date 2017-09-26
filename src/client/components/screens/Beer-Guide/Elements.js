@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Routes from './secondaryRoute';
 
 class Elements extends Component {
   render () {

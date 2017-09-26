@@ -10,26 +10,28 @@ import signin from './screens/auth/signin';
 import signup from './screens/auth/signup';
 
 import elements from './screens/Beer-Guide/Elements';
-import listStyle from './screens/Beer-Guide/StyleList';
 import beerStyle from './screens/Beer-Guide/BeerStyle';
-import calculator from './screens/Recipe-Calculator/';
+import calculator from './screens/Recipe-Calculator';
 import priming from './screens/Recipe-Calculator/primingCalculator';
 
-export default (
-  <Switch>
-    <Route path="/" exact component={BeerList} />
-    <Route path="beer" component={Beer} />
-    <Route path="beer/elements" component={elements} />
-    <Route path="beer/listStyle" component={listStyle} />
-    <Route path="beer/beerstyle" component={beerStyle} />
+const Routes = () => {
+  return (
+    <Switch>
+      <Route path="/" exact component={BeerList} />
+      <Route path="/beer" component={Beer} />
+      <Route path="/beer/elements" component={elements} />
+      <Route path="/beer/beerstyle" component={beerStyle} />
 
-    <Route path="grains" component={Grains} />
-    <Route path="hops" component={Hops} />
-    <Route path="yeast" component={Yeast} />
-    <Route path="calculator" component={calculator} />
-    <Route path="calculator/priming" component={priming} />
+      <Route path="/grains" component={Grains} />
+      <Route path="/hops" component={Hops} />
+      <Route path="/yeast" component={Yeast} />
+      <Route path="/calculator" component={calculator} />
+      <Route path="/calculator/priming" component={priming} />
 
-    <Route path="signin" component={signin} />
-    <Route path="signup" component={signup} />
-  </Switch>
-);
+      <Route path="/signin" component={signin} />
+      <Route path="/signup" component={signup} />
+    </Switch>
+  );
+}
+
+export default Routes;
