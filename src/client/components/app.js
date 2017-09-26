@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import Header from './header';
 import { Row } from 'react-materialize';
+import Routes from './Routes'
+import Header from "./Header";
 
-export default class App extends Component {
-  render() {
-     return (
-       <div>
-          <Header/>
-          <div style={divStyle}>
-             {this.props.children}
-          </div>     
-       </div>
-    );
-  }
+const App = ()  =>{
+  return (
+    <div>
+      <Header/>
+      <Routes/>
+    </div>
+  );
 }
 
-const divStyle = {
-  padding: "60px"
-}
