@@ -3,12 +3,8 @@ import { connect } from 'react-redux';
 
 
 const HopDetail = (props) => {
-    if (!props[name]) {
-      return <div>Click the list to get more info</div>
-    }
-
-    const { name, notes, alpha, beta , origin, substitutes} = props[name];
     
+    const { name, notes, alpha, beta , origin, substitutes} = props;
     return (
       <div>
         <h5>{name}</h5>
@@ -20,10 +16,6 @@ const HopDetail = (props) => {
     )
 }
 
-function mapStateToProps(state) {
-  return {
-    hop: state.activeHop
-  };
-}
 
-export default connect(mapStateToProps)(HopDetail);
+
+export default HopDetail;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Hops from './screens/Hops/hops';
+import Hops from './screens/Hops';
 import Grains from './screens/grains';
 import Yeast from './screens/yeast';
 import signin from './screens/auth/signin';

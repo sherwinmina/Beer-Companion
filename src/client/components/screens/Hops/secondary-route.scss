@@ -1,0 +1,33 @@
+h5{
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #696969;
+}
+h4{
+  font-family: Helvetica;
+  font-size: 20px;
+  color: #2B2A2A;
+}
+
+.route-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: grey dashed 1px;
+  
+}
+.secondary-route{
+  font-family: helvetica;
+ 
+}
+
+.regular{
+  color: #2B2D42;
+  font-weight: 300;
+}
+
+.line{
+  color: #662626;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: #EE9D34 solid 6px;
+}

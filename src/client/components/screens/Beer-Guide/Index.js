@@ -13,9 +13,9 @@ const BeerGuide = () => {
   return <div>
       <SecondaryRoute />
       <Switch>
+        <Route exact path="/" component={History} />
         <Route path="/beer/beerstyle" component={BeerStyle} />
         <Route path="/beer/elements" component={Elements} />
-        <Route exact path="/beer" component={History} />
         <Route path="/beer/brew" component={Brew} />
         <Route path="/beer/foodpairing" component={Pairing} />
       </Switch>

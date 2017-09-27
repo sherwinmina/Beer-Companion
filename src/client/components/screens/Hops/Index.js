@@ -2,24 +2,17 @@ import React, { Component } from 'react'
 import {Link} from 'react-router';
 import { connect } from 'react-redux';
 import {Collapsible, CollapsibleItem, Row, Col, Collection, CollectionItem } from 'react-materialize';
-import axios from 'axios';
 
-import HopDetail from './hop-detail';
+
+import HopsRoutes from './HopsRoute'
+
 import { selectHops, fetchHops } from '../../../actions';
 import { bindActionCreators } from 'redux';
 
 
 
 class Hops extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-
-  // componentDidMount() {
-  //   this.props.fetchHops();
-  // } 
-
+ 
   renderList() {
     return this.props.hops.map((hop) => {
       return (
@@ -34,27 +27,25 @@ class Hops extends Component {
   }
 
   render() {
-
-    //  if (!this.props.hops) {
-    //   return <div>Loading</div>
-    // }
-     console.log('hello')
     return (
       <Row>
-        <Col s={4}> 
-          <h5>List of Hops</h5>
-          <Collection>{this.renderList()}</Collection>
-        </Col>
-        
-        <Col s={8}> 
-           <HopDetail/>
-        </Col>
+      <HopsRoutes/>
+       
 
       </Row>
     );
   }
 }
 
+
+//  <Col s={4}> 
+        //   <h5>List of Hops</h5>
+        //   <Collection>{this.renderList()}</Collection>
+        // </Col>  
+
+        // <Col s={8}> 
+        //    <HopDetail {...this.props}/>
+        // </Col>
 
 function mapStateToProps(state) {
   return {
