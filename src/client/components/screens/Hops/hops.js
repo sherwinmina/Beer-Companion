@@ -14,7 +14,6 @@ class Hops extends Component {
   constructor(props) {
     super(props);
 
-    this.props.fetchHops();
   }
 
   // componentDidMount() {
