@@ -26,9 +26,7 @@ class Header extends Component {
       value: value,
     });
   }
-
- 
-
+  
   render() {
     return <div id="outer-container">
         <div id="logo-container">
@@ -42,7 +40,7 @@ class Header extends Component {
 
           <main id="page-wrap">
             <div className="box-menu">
-              <Link id="home" className="menu-item" to="/beer">
+              <Link id="home" className="menu-item" to="/">
                 Beer
               </Link>
             </div>
@@ -118,10 +116,15 @@ var styles = {
     fontSize: "1.15em"
   },
   bmMorphShape: {
-    fill: "#373a47"
+    fill: "#373a47",
+    boxShadow: "1px 1px 2px grey"
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)"
+  },
+  bmItemList: {
+     background: "#373a47",
+     boxShadow: "0px 0px 0px"
   }
 };
 

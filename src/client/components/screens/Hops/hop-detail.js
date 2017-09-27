@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-class HopDetail extends Component{
-  render() {
-    if (!this.props.hop) {
+const HopDetail = (props) => {
+    if (!props[name]) {
       return <div>Click the list to get more info</div>
     }
 
-    const { name, notes, alpha, beta , origin, substitutes} = this.props.hop;
-
-
+    const { name, notes, alpha, beta , origin, substitutes} = props[name];
+    
     return (
       <div>
         <h5>{name}</h5>
@@ -20,7 +18,6 @@ class HopDetail extends Component{
         <div><b>Substitues:</b> {substitutes}</div>
       </div>
     )
-  }
 }
 
 function mapStateToProps(state) {

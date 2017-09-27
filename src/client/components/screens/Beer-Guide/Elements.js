@@ -4,7 +4,6 @@ class Elements extends Component {
   render () {
     return (
       <div>
-      <Routes/>
       <br/>
       <br/>
         <h2>Elements of beer style</h2>

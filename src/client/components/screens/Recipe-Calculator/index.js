@@ -17,7 +17,6 @@ class Calculator extends Component {
           </div>
        </div>
 
-       <hr style={{borderWidth:'2px'}}> </hr>
 
         <div className="row" >
           <div className="col s6">
@@ -89,7 +88,8 @@ class Calculator extends Component {
          <h5>Fermentables</h5>
          <Row>
          <Col>  
-          <Input className="browser-default" s={4} type='select' label="Units" defaultValue='2'>
+          
+         <Input className="browser-default" s={4} type='select' label="Units" defaultValue='2'>
                 <option value='2'>US-(Gallons, lbs, oz)</option>
                 <option value='3'>Metric-(liters, kg, g)</option>
             </Input >
@@ -97,10 +97,8 @@ class Calculator extends Component {
                 <option value='2'>US-(Gallons, lbs, oz)</option>
                 <option value='3'>Metric-(liters, kg, g)</option>
             </Input >
-         </Col>
-          
-         </Row>
-						
+         </Col>  
+         </Row>	
 				</CardPanel>
 		  </Col>
 
