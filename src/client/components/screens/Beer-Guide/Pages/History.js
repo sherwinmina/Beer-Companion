@@ -4,7 +4,7 @@ const History = () => {
   return (
     <div>
       <div>
-      <img style={{maxWidth: '100%'}} src="/src/client/images/history.jpg" alt=""/>
+      <img style={{maxWidth: '100%', paddingTop: '50px'}} src="/src/client/images/history.jpg" alt=""/>
         <h4>Beer</h4>
 
         <p>

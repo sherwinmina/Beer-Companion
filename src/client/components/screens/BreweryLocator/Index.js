@@ -4,7 +4,7 @@ class BreweryLocator extends Component {
   render () {
     return (
       <div>
-        Use yelpa Api to seract for breweries near by.
+        Use yelp Api to search for breweries near by.
         Brewerry Locator
       </div>
     )

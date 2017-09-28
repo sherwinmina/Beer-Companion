@@ -37,7 +37,6 @@ class Header extends Component {
           <img id="logo-in-menu" src="/src/client/public/beer-outline-filled.png" alt="" />
           <p id="logo-text"> Beer Companion</p>
 
-
           <main id="page-wrap">
             <div className="box-menu">
               <Link id="home" className="menu-item" to="/">
@@ -52,6 +51,11 @@ class Header extends Component {
             <div className="box-menu">
               <Link to="/grains" className="menu-item">
                 Grains
+              </Link>
+            </div>
+            <div className="box-menu">
+              <Link to="/brewerylocator" className="menu-item">
+                Brewery Locator
               </Link>
             </div>
             <div className="box-menu">
