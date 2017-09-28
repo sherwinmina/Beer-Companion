@@ -20,7 +20,6 @@ class secondaryRoute extends Component {
 
   render() {
      const { activeItem } = this.state;
-    console.log(this.state)
     return <div className="route-container">
         <div className="secondary-route">
           <Link to="/" className={activeItem === "history" ? "line" : "regular"} name="history" onClick={this.handleChange}>

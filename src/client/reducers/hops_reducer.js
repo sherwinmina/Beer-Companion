@@ -1,9 +1,9 @@
-import { data } from '../../../data/hops.js';
+
 import { FETCH_HOPS } from '../actions/types';
+import {hops} from "../../../data/hops2.js";
 
 
-
-export default function(state = data, action) {
+export default function(state = hops, action) {
   return state;
 }
 

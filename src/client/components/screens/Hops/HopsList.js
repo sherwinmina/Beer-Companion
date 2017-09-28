@@ -1,74 +1,47 @@
-import React from 'react'
-
-const HopsList = () => {
-  return (
-    <div>
-      HopsList
-      <p>lknaklsnfdlkasn akjfnlakdionaoisd</p>
-    </div>
-  )
-}
-
-export default HopsList
-
-
 import React, { Component } from 'react'
 import {Link} from 'react-router';
 import { connect } from 'react-redux';
 import {Collapsible, CollapsibleItem, Row, Col, Collection, CollectionItem } from 'react-materialize';
 
 
-import HopsRoutes from './HopsRoute'
-
 import { selectHops, fetchHops } from '../../../actions';
 import { bindActionCreators } from 'redux';
 
+import HopDetail from './hop-detail'
 
+class HopsList extends Component {
+  constructor(props){
+    super(props)
 
-class Hops extends Component {
- 
-  renderList() {
-    return this.props.hops.map((hop) => {
-      return (
-        <CollectionItem
-          key={hop.id}
-          onClick ={() => this.props.selectHops(hop)}
-          className="list-group-item">
-          {hop.name}
-        </CollectionItem>
-      );
-    });
+    this.state = { clickedItem: null };
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(event) {
+    this.setState({clickedItem: event.target.textContent})
   }
 
   render() {
-    return (
-      <Row>
-      <HopsRoutes/>
-       
+    let {hops} = this.props
 
-      </Row>
-    );
+     return (
+     <div>
+       <HopDetail hops={hops} activeItem={this.state.clickedItem} handleClick={this.handleClick}/>
+     </div>
+    )
   }
 }
 
+function mapStateToProps(state) {
+  return {
+  hops: state.hops
+  };
+}
 
-// //  <Col s={4}> 
-//         //   <h5>List of Hops</h5>
-//         //   <Collection>{this.renderList()}</Collection>
-//         // </Col>  
-
-//         // <Col s={8}> 
-//         //    <HopDetail {...this.props}/>
-//         // </Col>
-
-// function mapStateToProps(state) {
-//   return {
-//   hops: state.hops
-//   };
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ selectHops, fetchHops }, dispatch)
-// }
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectHops, fetchHops }, dispatch)
+}
   
-// export default connect(mapStateToProps, mapDispatchToProps)(Hops);
+export default connect(mapStateToProps, mapDispatchToProps)(HopsList);
+
+

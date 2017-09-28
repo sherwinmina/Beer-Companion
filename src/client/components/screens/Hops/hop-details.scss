@@ -1,0 +1,33 @@
+.container-hop-details{
+  display: flex;
+  padding-top: 40px;
+}
+
+.list-container{ 
+  padding: 10px;
+  max-height: 400px;
+  width: 30%;
+  border: #3B5B85 solid 3px;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+.hops-name{
+  cursor: pointer;
+  color: #707271;
+  padding: 10px;
+  border-bottom: #BEBDBD solid 1px;
+}
+
+.item-card{
+  padding: 10px;
+  margin: 20px;
+  width: 70%;
+  height: 50%;
+  background: #DFDEDD;
+  border: #7777B8 solid 4px;
+}
+
+.card-name{
+  color: #188A6D;
+  text-align: center;
+}
