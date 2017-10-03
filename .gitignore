@@ -1,7 +1,3 @@
-/node_modules
-bundle.js
+cra-server-ex.graffle
+node_modules
 npm-debug.log
-
-# IntelliJ
-*.iml
-/.idea
