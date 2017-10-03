@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   // axios
   //   .get('http://api.brewerydb.com/v2/?key=e61443089ea955edc0ad009ec7d5fc1a')
   //   .then(item => res.send({ player: item.data }))
-// res.send('hello')
+
   axios
     .get(
       'https://api.yelp.com/v3/businesses/search?term=brewery&location=san+francisco',

@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "start": "webpack-dev-server --progress --inline --hot",
+    "build": "webpack",
+    "postinstall": "webpack -p --config ./webpack.config.js --progress",
     "surge":  "surge -p build"
   },
   "author": "Sherwin Mina",

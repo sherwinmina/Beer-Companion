@@ -10,6 +10,7 @@ var cors = require('cors')
 var brewerylocator = require('./routes/brewerylocator')
 
 var app = express()
+app.set('port', process.env.PORT || 3001)
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'))
@@ -46,6 +47,8 @@ app.use(function(err, req, res, next) {
 })
 
 
-app.listen({port: 3001})
+app.listen(app.get('port'), () => {
+  console.log(`Find the server at: http://localhost:${app.get('port')}/`) // eslint-disable-line no-console
+})
 
 module.exports = app
