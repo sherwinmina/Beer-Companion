@@ -3,8 +3,10 @@
 Currently an ongoing project that both serves as a website and a web app about beer.
 
 It is built with react, redux, and node.
-####     Component Behavior
-  * A sortable list for Tasks and load/save that list to the server.
+
+####     Deployed App
+  *The front-part is currently hosted on surge.
+  *Any part of the front-end routes that needs to be manage by node are hosted on heroku
 
   
  
