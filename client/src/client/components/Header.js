@@ -30,11 +30,11 @@ class Header extends Component {
   render() {
     return <div id="outer-container">
         <div id="logo-container">
-          <img id="logo" src="/src/client/public/beer-outline-filled.png" alt="" />
+          <img id="logo" src={require('../public/beer-outline-filled.png')} alt="" />
         </div>
 
-        <Menu styles={styles} customBurgerIcon={<img src="/src/client/public/food.png" />}>
-          <img id="logo-in-menu" src="/src/client/public/beer-outline-filled.png" alt="" />
+        <Menu styles={styles} customBurgerIcon={<img src={require('../public/food.png')} />}>
+          <img id="logo-in-menu" src={require('../public/beer-outline-filled.png')} alt="" />
           <p id="logo-text"> Beer Companion</p>
 
           <main id="page-wrap">
@@ -85,7 +85,7 @@ class Header extends Component {
             </div>
           </main>
         </Menu>
-      </div>;
+      </div>
   }
 }
 

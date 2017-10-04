@@ -1,2 +1,2 @@
-web: node start-client.js
+web: ./client node server.js
 web: node server.js

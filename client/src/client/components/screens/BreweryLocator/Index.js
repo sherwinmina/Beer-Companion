@@ -5,7 +5,7 @@ class BreweryLocator extends Component {
 
   componentDidMount() {
   axios
-    .get('http://localhost:3001/brewerylocator')
+    .get('https://limitless-hollows-72480.herokuapp.com/brewerylocator')
       .then(data => console.log(data))
   }
 

@@ -6,11 +6,13 @@
   "repository": "",
   "https_proxy": "http://localhost:3001/",
   "scripts": {
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "start": "webpack-dev-server --progress --inline --hot",
+    "dev": "webpack-dev-server --progress --inline --hot",
+    "start": "node server.js",
     "build": "webpack",
-    "postinstall": "webpack -p --config ./webpack.config.js --progress",
-    "surge":  "surge -p build"
+    "prod": "node server.js",
+    "postinstall": "webpack -p",
+    "surge":  "surge -p build",
+    "surge-deploy:development": "yarn run webpack -p; surge -p build -d Beer-Companion.surge.sh"
   },
   "author": "Sherwin Mina",
   "license": "ISC",
