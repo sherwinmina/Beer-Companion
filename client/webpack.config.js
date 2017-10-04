@@ -51,7 +51,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        test: /\.(png|woff|woff2|eot|ttf|svg|jpg|pdf)(\?.*$|$)/,
         use: "url-loader?limit=100000"
       }
     ]

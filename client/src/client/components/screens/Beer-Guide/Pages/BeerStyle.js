@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const BeerStyle  = () => {
     return <div>
-      <img style={{width: '100%', paddingTop:'50px'}} src="/src/client/images/beertaxonomy.png" alt=""/>
+      <img style={{width: '100%', paddingTop:'50px'}} src={require('../../../../images/beertaxonomy.png')} alt=""/>
         <p>
           As a generic word, beer includes every style of fermented malt
           beverage, including ales and lagers and all the individual and

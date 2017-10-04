@@ -2,9 +2,8 @@ import React from 'react'
 
 const Brew = ()  =>{
   return <div>
-      
-      <img style={styles.image} src="/src/client/images/brewing-process.jpg" alt="" />
-      
+      <img style={styles.image} src={require('../../../../images/brewing-process.png')} alt="" />
+
       <h5>Water</h5>
       <p>
         Pure water is essential to good beer – and brewers pay scrupulous
@@ -64,7 +63,7 @@ const Brew = ()  =>{
         brew. When the fermentation is over, the yeast is removed. At last, we
         have beer!
       </p>
-    </div>;
+    </div>
   
 }
 
