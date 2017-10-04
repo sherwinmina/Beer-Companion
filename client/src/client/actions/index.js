@@ -1,15 +1,16 @@
 import axios from 'axios';
 
 import { browserHistory } from 'react-router';
-import { 
+import {
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
   FETCH_MESSAGE,
   HOP_SELECTED,
   FETCH_HOPS,
-  FETCH_YEAST
- } from './types';
+  FETCH_YEAST,
+  FETCH_BREWERY
+} from './types'
 
 import {data} from '../../../data/hops.js';
 
@@ -26,6 +27,13 @@ export function selectHops(hop) {
 export function fetchHops() {
   return {
     type: FETCH_HOPS,
+    payload: data
+  };
+}
+
+export function fetchBrewery() {
+  return {
+    type: FETCH_BREWERY,
     payload: data
   };
 }

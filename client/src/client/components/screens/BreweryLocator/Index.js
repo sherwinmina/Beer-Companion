@@ -1,22 +1,35 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import BreweryCard from './breweryCard'
 
 class BreweryLocator extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      breweries: [],
+      term: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
 
   componentDidMount() {
   axios
     .get('https://limitless-hollows-72480.herokuapp.com/brewerylocator')
-      .then(data => console.log(data))
+      .then(response => this.setState({ breweries: response.data.breweries.businesses }))
+  }
+
+  handleChange(e){
+    this.setState({term: e.target.value})
   }
 
   render () {
-    return (
-      <div>
-      
-        Use yelp Api to search for breweries near by.
-        Brewery Locator
+    console.log(this.state.term)
+    return <div>
+        <input onChange={this.handleChange}/>
+        Use yelp Api to search for breweries near by. Brewery Locator
+        <BreweryCard breweries={this.state.breweries}/>
       </div>
-    )
   }
 }
 
