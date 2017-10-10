@@ -11,8 +11,9 @@
     "build": "webpack",
     "prod": "node server.js",
     "postinstall": "webpack -p",
-    "surge":  "surge -p build",
-    "surge-deploy:development": "yarn run webpack -p; surge -p build -d Beer-Companion.surge.sh"
+    "surge": "surge -p build",
+    "surge-deploy:development":
+      "yarn run webpack -p; surge -p build -d Beer-Companion.surge.sh"
   },
   "author": "Sherwin Mina",
   "license": "ISC",
