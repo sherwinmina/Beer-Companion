@@ -1,40 +1,51 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 // import { Navbar, NavItem, Dropdown, Button } from 'react-materialize';
 
-import AppBar from "material-ui/AppBar";
-import IconButton from "material-ui/IconButton";
-import NavigationClose from "material-ui/svg-icons/navigation/close";
-import FlatButton from "material-ui/FlatButton";
-import { Tabs, Tab } from "material-ui/Tabs";
+import AppBar from 'material-ui/AppBar'
+import IconButton from 'material-ui/IconButton'
+import NavigationClose from 'material-ui/svg-icons/navigation/close'
+import FlatButton from 'material-ui/FlatButton'
+import { Tabs, Tab } from 'material-ui/Tabs'
 
-import { elastic as Menu } from "react-burger-menu";
+import { elastic as Menu } from 'react-burger-menu'
 
 import '../styles/Header.scss'
 
-
 class Header extends Component {
-  constructor(props){
-   super(props);
+  constructor(props) {
+    super(props)
     this.state = {
-      value: 'item',
+      value: 'item'
     }
   }
 
-  handleChange = (value) => {
+  handleChange = value => {
     this.setState({
-      value: value,
-    });
+      value: value
+    })
   }
-  
+
   render() {
-    return <div id="outer-container">
+    return (
+      <div id="outer-container">
         <div id="logo-container">
-          <img id="logo" src={require('../public/beer-outline-filled.png')} alt="" />
+          <img
+            id="logo"
+            src={require('../public/beer-outline-filled.png')}
+            alt=""
+          />
         </div>
 
-        <Menu styles={styles} customBurgerIcon={<img src={require('../public/food.png')} />}>
-          <img id="logo-in-menu" src={require('../public/beer-outline-filled.png')} alt="" />
+        <Menu
+          styles={styles}
+          customBurgerIcon={<img src={require('../public/food.png')} />}
+        >
+          <img
+            id="logo-in-menu"
+            src={require('../public/beer-outline-filled.png')}
+            alt=""
+          />
           <p id="logo-text"> Beer Companion</p>
 
           <main id="page-wrap">
@@ -49,8 +60,8 @@ class Header extends Component {
               </Link>
             </div>
             <div className="box-menu">
-              <Link to="/grains" className="menu-item">
-                Grains
+              <Link to="/search" className="menu-item">
+                Search
               </Link>
             </div>
             <div className="box-menu">
@@ -86,50 +97,48 @@ class Header extends Component {
           </main>
         </Menu>
       </div>
+    )
   }
 }
 
-
-export default Header;
+export default Header
 
 var styles = {
-  customBurgerIcon:{
+  customBurgerIcon: {
     height: '300px'
   },
   bmBurgerButton: {
-    position: "fixed",
-    width: "60px",
-    height: "8%",
-    left: "25px",
-    top: "2px"
+    position: 'fixed',
+    width: '60px',
+    height: '8%',
+    left: '25px',
+    top: '2px'
   },
   bmBurgerBars: {
-    background: "#9599B3",
-    border: "1px solid black"
+    background: '#9599B3',
+    border: '1px solid black'
   },
   bmCrossButton: {
-    height: "24px",
-    width: "24px"
+    height: '24px',
+    width: '24px'
   },
   bmCross: {
-    background: "#bdc3c7"
+    background: '#bdc3c7'
   },
   bmMenu: {
-    background: "#373a47",
+    background: '#373a47',
     // padding: "3.5em 2.5em 0",
-    fontSize: "1.15em"
+    fontSize: '1.15em'
   },
   bmMorphShape: {
-    fill: "#373a47",
-    boxShadow: "1px 1px 2px grey"
+    fill: '#373a47',
+    boxShadow: '1px 1px 2px grey'
   },
   bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)"
+    background: 'rgba(0, 0, 0, 0.3)'
   },
   bmItemList: {
-     background: "#373a47",
-     boxShadow: "0px 0px 0px"
+    background: '#373a47',
+    boxShadow: '0px 0px 0px'
   }
-};
-
-
+}

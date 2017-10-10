@@ -15,6 +15,10 @@ var fermentables = require('./routes/fermentables')
 var featured = require('./routes/featured')
 var adjuncts = require('./routes/adjuncts')
 var search = require('./routes/search')
+var mongoose = require('mongoose')
+
+// DB Setup
+// mongoose.connect('mongodb_URL')
 
 var app = express()
 app.set('port', process.env.PORT || 3001)

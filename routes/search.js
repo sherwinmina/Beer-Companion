@@ -17,8 +17,8 @@ router.get('/', function(req, res, next) {
 })
 
 router.post('/', function(req, res, next) {
-  console.log(req.body.age)
-  res.send(req.body.name)
+  console.log(req.body.term)
+  // res.send(req.body.term)
   // all/ beers/ breweries in req.body.searchValue  and q: req.body.query object
 
   // brewdb.search.all({ q: 'coors' }, callback)
@@ -28,6 +28,10 @@ router.post('/', function(req, res, next) {
   // brewdb.breweries.find({ established: 2010 }, (err, data) => {
   //   res.send(data)
   // })
+
+  brewdb.search.all({ q: req.body.term }, (err, data) => {
+    res.send(data)
+  })
 })
 
 module.exports = router

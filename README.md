@@ -22,6 +22,9 @@ From the root directory run npm start and it will fire up both the client server
 * Test that the action creators are properly managing promise objects, especially with async dispatch with redux-thunk before it hits the reducer.
 * Test the reducer to make sure it is updating the application state according to the actions fired;
 
+### Features to add
+create user and enable them to save beers they have tried and breweries that they have been to.
+
 
 
 
