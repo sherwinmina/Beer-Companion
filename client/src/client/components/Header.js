@@ -60,6 +60,11 @@ class Header extends Component {
               </Link>
             </div>
             <div className="box-menu">
+              <Link to="/Featured" className="menu-item">
+                Featured
+              </Link>
+            </div>
+            <div className="box-menu">
               <Link to="/search" className="menu-item">
                 Search
               </Link>
@@ -74,11 +79,7 @@ class Header extends Component {
                 Yeast
               </Link>
             </div>
-            <div className="box-menu">
-              <Link to="/calculator/priming" className="menu-item">
-                Priming Calculator
-              </Link>
-            </div>
+
             <div className="box-menu">
               <Link to="/calculator" className="menu-item">
                 Brewing Calculator

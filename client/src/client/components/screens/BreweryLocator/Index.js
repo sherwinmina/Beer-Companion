@@ -3,7 +3,7 @@ import axios from 'axios'
 import BreweryCard from './breweryCard'
 
 class BreweryLocator extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       breweries: [],
@@ -14,22 +14,27 @@ class BreweryLocator extends Component {
   }
 
   componentDidMount() {
-  axios
-    .get('https://limitless-hollows-72480.herokuapp.com/brewerylocator')
-      .then(response => this.setState({ breweries: response.data.breweries.businesses }))
+    axios
+      .get('https://limitless-hollows-72480.herokuapp.com/brewerylocator')
+      .then(response =>
+        this.setState({ breweries: response.data.breweries.businesses })
+      )
   }
 
-  handleChange(e){
-    this.setState({term: e.target.value})
+  handleChange(e) {
+    this.setState({ term: e.target.value })
   }
 
-  render () {
+  render() {
     console.log(this.state.term)
-    return <div>
-        <input onChange={this.handleChange}/>
-        Use yelp Api to search for breweries near by. Brewery Locator
-        <BreweryCard breweries={this.state.breweries}/>
+    return (
+      <div>
+        <input onChange={this.handleChange} />
+        This page uses the yelp api for near by breweries. It might take a few
+        seconds to start up as the Node server on Heroku boots up.
+        <BreweryCard breweries={this.state.breweries} />
       </div>
+    )
   }
 }
 
@@ -42,6 +47,4 @@ class BreweryLocator extends Component {
 // secret
 //HvDC032ZkCGPlVoaGAmNlfxn6cCR6QtF4Sq7gpOmz7xIE62fTmmHNAtWcjQOQ5Mj
 
-
-
-export default BreweryLocator;
+export default BreweryLocator

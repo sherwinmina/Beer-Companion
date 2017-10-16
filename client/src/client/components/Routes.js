@@ -8,7 +8,7 @@ import signin from './screens/auth/signin'
 import signup from './screens/auth/signup'
 
 import BeerGuide from './screens/Beer-Guide'
-
+import Featured from './screens/Featured'
 import Locator from './screens/BreweryLocator'
 import calculator from './screens/Recipe-Calculator'
 import priming from './screens/Recipe-Calculator/primingCalculator'
@@ -17,6 +17,7 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/" component={BeerGuide} />
+      <Route path="/Featured" component={Featured} />
       <Route path="/beer" component={BeerGuide} />
       <Route path="/search" component={Search} />
       <Route path="/hops" component={Hops} />
